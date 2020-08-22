@@ -1,15 +1,28 @@
-dwm - dynamic window manager
-============================
+# dwm - dynamic window manager
 dwm is an extremely fast, small, and dynamic window manager for X.
 
 
-Requirements
-------------
+## About this fork
+### Upstream
+To pull changes from upstream:
+```
+if not already done:
+$ git remote add upstream 'https://git.suckless.org/dwm'
+
+$ git fetch upstream
+$ git checkout custom
+$ git merge upstream/master
+
+To push the upstream tags:
+$ git push origin --tags
+```
+
+
+## Requirements
 In order to build dwm you need the Xlib header files.
 
 
-Installation
-------------
+## Installation
 Edit config.mk to match your local setup (dwm is installed into
 the /usr/local namespace by default).
 
@@ -19,8 +32,7 @@ necessary as root):
     make clean install
 
 
-Running dwm
------------
+## Running dwm
 Add the following line to your .xinitrc to start dwm using startx:
 
     exec dwm
@@ -42,7 +54,6 @@ like this in your .xinitrc:
     exec dwm
 
 
-Configuration
--------------
+## Configuration
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
